@@ -1,0 +1,230 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .form-group {
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    color: #555;
+  }
+  /* Login form styles */
+#login-form {
+    margin: 0 auto;
+}
+
+#login input[type="text"],
+#login input[type="password"],
+#login button {
+    display: block;
+    margin-bottom: 10px;
+   
+}
+
+#login button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#login button:hover {
+    background-color: #555;
+}
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  #loginMessage {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+  #balanceAmount {
+    font-size: 24px;
+    font-weight: bold;
+    color: #009688;
+  }
+  
+
+  h1 {
+    text-align: center;
+}
+
+.account-details {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+input[type="text"],
+input[type="number"],
+
+#message {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#payment-status {
+  margin-top: 20px;
+  text-align: center;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('bill-payment-form');
+  const paymentStatus = document.getElementById('payment-status');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const payee = form.elements['payee'].value;
+    const amount = parseFloat(form.elements['amount'].value);
+    
+    // Here you can perform further validation and processing
+    // For simplicity, let's just display the payment status
+    
+    if (payee && amount) {
+      paymentStatus.textContent = `Payment of $${amount} to ${payee} was successful.`;
+      // You can also send this data to the server for processing
+    } else {
+      paymentStatus.textContent = 'Please fill in all fields.';
+    }
+  });
+});
+
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #f44336;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  display: none;
+}
+
+.notification.show {
+  display: block;
+}
+
+#response {
+  input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+#externalData {
+    margin-top: 20px;
+}
+.analytics-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#limitMessage {
+  margin-top: 10px;
+  font-weight: bold;
+}

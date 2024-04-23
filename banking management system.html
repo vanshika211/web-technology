@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banking System Management</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to Our Banking System</h1>
+      <nav>
+          <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Transactions</a></li>
+              <li><a href="#">Accounts</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Logout</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <main>
+        <section id="account-info">
+            <h2>Welcome, User!</h2>
+        </section>
+        
+       <h2>Login to Banking Management System</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <p id="loginMessage"></p>
+    </div>
+        <div id="language-selector">
+            <button onclick="changeLanguage('en')">English</button>
+            <button onclick="changeLanguage('fr')">hindi</button>
+        </div>
+        <div class="container">
+          <button id="fetchDataBtn">Fetch Data from External System</button>
+        <div id="externalData"></div>
+      </div>
+    
+    <div class="container">
+    <section id="balance">
+      <h2>Account Balance:</h2>
+      <p id="balanceAmount">$1000</p>
+    </section>
+
+
+    <section id="transactions">
+      <h2>Recent Transactions:</h2>
+      <ul id="transactionList">
+        <li>Deposit $500</li>
+        <li>Withdraw $200</li>
+      </ul>
+    </section>
+
+    <section id="actions">
+      <h2>Actions:</h2>
+      <button onclick="deposit()">Deposit</button>
+      <button onclick="withdraw()">Withdraw</button>
+    </section>
+  </div>
+  <div class="container">
+        <h1>Account Management</h1>
+        <div class="account-details">
+            <label for="account-number">Account Number:</label>
+            <input type="text" id="account-number" value="123456789" readonly>
+            <label for="account-name">Account Name:</label>
+            <input type="text" id="account-name" value="John Doe">
+            <label for="balance">Balance:</label>
+            <input type="text" id="balance" value="$5000" readonly>
+            <button id="edit-btn">Edit</button>
+            <button id="save-btn" style="display: none;">Save</button>
+        </div>
+    </div>
+    <div class="container">
+    <h1>Fund Transfer</h1>
+    <form id="transferForm">
+      <label for="fromAccount">From Account:</label>
+      <input type="text" id="fromAccount" name="fromAccount" required>
+      <label for="toAccount">To Account:</label>
+      <input type="text" id="toAccount" name="toAccount" required>
+      <label for="amount">Amount:</label>
+      <input type="number" id="amount" name="amount" min="0" required>
+      <button type="submit">Transfer</button>
+    </form>
+    <div id="message"></div>
+  </div>
+
+  <div class="container">
+    <h1>Bill Payment</h1>
+    <form id="bill-payment-form">
+      <label for="payee">Payee:</label>
+      <input type="text" id="payee" name="payee" required>
+      <label for="amount">Amount:</label>
+      <input type="number" id="amount" name="amount" min="0" step="0.01" required>
+      <button type="submit">Pay Now</button>
+    </form>
+    <div id="payment-status"></div>
+  </div>
+   <div class="container">
+      <h2>Account Statements</h2>
+      <button onclick="generateAccountStatement()">Generate Statement</button>
+      <div id="account-statement"></div>
+    </div>
+    <div class="container">
+      <h2>Loan Management</h2>
+      <form id="loan-form">
+        <label for="loan-amount">Loan Amount:</label>
+        <input type="number" id="loan-amount" required>
+        <label for="interest-rate">Interest Rate (%):</label>
+        <input type="number" id="interest-rate" required>
+        <button type="submit">Calculate</button>
+      </form>
+      <div id="loan-result"></div>
+    </div>
+    <div class="analytics-container">
+        <h2>Transaction Analysis</h2>
+        <canvas id="transactionChart"></canvas>
+    </div>
+    <div class="container">
+    <h1>Transaction Limits</h1>
+    <div>
+      <label for="amount">Enter Amount:</label>
+      <input type="number" id="amount" placeholder="Enter amount">
+    </div>
+    <div>
+      <button onclick="checkTransactionLimit()">Check Limit</button>
+      <p id="limitMessage"></p>
+    </div>
+  </div>
+    
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+<meta http-equiv="X-Frame-Options" content="DENY">
+ <div class="container">
+        <h1>Customer Support</h1>
+        <form id="supportForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="response"></div>
+    </div>
+    <div class="container">
+    <h2>Feedback Form</h2>
+    <form id="feedbackForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+    <p id="successMessage" class="hidden">Thank you for your feedback!</p>
+  </div>
+<div class="notification" id="notification">
+    <!-- Notification content will be inserted here -->
+  </div>
+
+  <!-- Button to trigger a sample notification -->
+  <button onclick="showNotification()">Show Notification</button>
+   </main>
+ <footer>
+        <p>&copy; 2024 My Bank. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script1.js"></script>
+</body>
+</html>
